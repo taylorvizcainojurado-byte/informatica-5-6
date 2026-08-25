@@ -3,6 +3,12 @@ def main():
     print("Thanks for dining at Chatahoochee!")
 
     rating = float(input("Rate us on a scale from 1-5: "))
+    if rating > 5:
+        rating = 5
+    elif rating < 0:
+        rating = 0
+
+
 
     if rating > 4.5:
         print("Absolutely Amazing!")
