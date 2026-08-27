@@ -33,23 +33,26 @@ def main():
     func = input("Write an arithmetic operation: ")
 
     parts = func.split(" ")
-    numb1 = float(parts[0])
+    numb1 = int(parts[0])
     operator = parts[1]
-    numb2 = float(parts[2])
+    numb2 = int(parts[2])
 
     if operator == "+":
-        ttal = float(numb1 + numb2)
-        print(ttal)
+        ttal = numb1 + numb2
+        print(float(ttal))
     elif operator == "-":
-        ttal2 = float(numb1 - numb2)
-        print(ttal2)
+        ttal2 = numb1 - numb2
+        print(float(ttal2))
     elif operator == "*":
-        ttal3 = float(numb1 * numb2)
-        print(ttal3)
+        ttal3 = numb1 * numb2
+        print(float(ttal3))
     elif operator == "/":
-        ttal4 = float(numb1 / numb2)
-        print(ttal4)
-        
+        ttal4 = numb1 / numb2
+        print(float(ttal4))
+
+
+
+
 
 
 
