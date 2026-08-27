@@ -24,20 +24,26 @@ def main():
         print("Invalid atmosphere layer")
 
     alt = float(input("Enter exact altitude: "))
+    
     if alt < 10000 and alt >= 700:
         alt /= 2
+        round(alt,1)
         print(f"Total descent time: {alt} seconds")
     elif alt <= 699 and alt >= 85:
         alt /= 0.5
+        round(alt,1)
         print(f"Total descent time: {alt} seconds")
     elif alt <= 84 and alt >= 50:
         alt /= 0.2
+        round(alt,1)
         print(f"Total descent time: {alt} seconds")
     elif alt <= 49 and alt >= 12:
         alt /= 0.075
+        round(alt,1)
         print(f"Total descent time: {alt} seconds")
     elif alt <= 11 and alt >= 0:
         alt /= 0.02
+        round(alt,1)
         print(f"Total descent time: {alt} seconds")
     else:
         print("Invalid altitude")
