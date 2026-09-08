@@ -1,5 +1,5 @@
 import random
-
+import time
 
 def main():
     ideas = ["Cutural Backround", "Lessons from failure", "Personal Challenges", "Debates on tecnology", "Education System", "Historical turning points", "Psychology concepts", "Literature", "Historical Speeches"]
@@ -13,6 +13,7 @@ def main():
 
     print("Heres an idea that might help you out ")
     print(rndm)
+    time.sleep(1)
     help2 = input("Does this help? ").lower().strip()
     while help2 != "yes":
         help3 = input("Want another idea? ").lower().strip()
