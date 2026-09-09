@@ -20,13 +20,16 @@ def main():
     time.sleep(1)
     help2 = input("Does this help? ").lower().strip()
     while help2 != "yes":
+        time.sleep(1)
         help3 = input("Want another idea? ").lower().strip()
         if help3 == "yes":
+            time.sleep(1)
             print("Heres another idea! ")
             rndm2 = random.choice(ideas)
             print(rndm2)
 
         else:
+            time.sleep(1)
             print("Glad I could Help! ")
             break
 
