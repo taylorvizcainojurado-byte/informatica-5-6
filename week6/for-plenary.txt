@@ -1,0 +1,8 @@
+Write a description for a while loop:
+A while loop is a loop that is going to keep going on forever unless you set a condition to break the loop.
+
+Write a description for a for loop:
+A for loop will loop something a preditermined amount of times.
+
+Compare a while loop to a for loop:
+A while loop doesnt have a preditermined end and can keep going on forever and a for loop has a preditermined end so it will not go on forever.
