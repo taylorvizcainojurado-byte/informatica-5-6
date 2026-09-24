@@ -1,13 +1,19 @@
 def main():
-    table = 5
+    while True:
+        table = input("Enter a number: ").lower().strip()
+        if table == "exit":
+            break
+        else:
 
-    print(f"Here is the {table} times table")
+            max = int(input("Enter maximum value for the times table: "))
 
-    for x in range(10,30):
-        ans = x * table
-        print(f"{x} times {table} is {ans}")
+            print(f"Here is the {table} times table")
+
+            for x in range(1,max+1):
+                ans = x * int(table)
+                print(f"{x} times {table} is {ans}")
 
 
 if __name__ == "__main__":
     main()
-    
+
