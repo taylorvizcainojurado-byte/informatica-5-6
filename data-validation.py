@@ -1,15 +1,27 @@
 def main():
-    not_validated = True
-    while not_validated:
+    validated = True
+    while validated:
         try:
             number = int(input("Enter a number between 1 and 10: "))
-            if number >= 10 and number <= 1:
-                print("Between 1 and 10")
+            if number >= 1 and number <= 10:
+                print("Success! ")
+                validated = False
             else:
-                not_validated = False
+                print("Between 1 AND 10! ")
         except ValueError:
-            print("You have to enter a NUMBER BETWEEN 1 AND 10: ")
+            print("You must enter a NUMBER: ")
 
+    nmb = True
+    while nmb:
+        try:
+            name = input("Enter your name: ")
+            if name == "":
+                print("You must enter your name!!!: ")
+            else:
+                print(f"Stored name: {name}")
+                nmb = False
+        except ValueError:
+            print("You MUST enter your name!!! ")
 
 
 
