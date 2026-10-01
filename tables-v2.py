@@ -3,9 +3,20 @@ def main():
     for i in range(1,11):
         valid.append(str(i))
     print("Welcome to the Times Table Test! ")
-
-    test = input("What table would you like to be tested on?: ").lower().strip()
-    max = int(input("Enter maximum value for the times table: "))
+    bby = True
+    while bby:
+        try:
+            test = int(input("What table would you like to be tested on?: "))
+            bby = False
+        except ValueError:
+            print("Invalid")
+    bay = True
+    while bay:
+        try:
+            max = int(input("Enter maximum value for the times table: "))
+            bay = False
+        except ValueError:
+            print("Invalid")
 
     print(f"Here is the {test} times table test")
 
