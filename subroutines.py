@@ -11,10 +11,10 @@ def main():
 
 
     def average_value(a,b,c):
-        answer = (a + b + c) / 3
-        print(f"The average value is {answer}")
+        answer = (a + b + c)/3
+        print(f"The average value is {round(answer,1)}")
 
-
+    average_value(6,8,10)
 
     x = float(input("Enter a number: "))
     y = float(input("Enter another number: "))
