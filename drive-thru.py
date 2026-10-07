@@ -30,6 +30,7 @@ def main():
             print("Invalid Choice")
 
     choice = input("What would you like to order? ").lower().strip()
+    print("Perfect!")
     get_item(choice)
 
 
