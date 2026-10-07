@@ -25,7 +25,7 @@ def main():
             elif a == "cookie":
                 print("🍪")
             else:
-                print("Invalid Choice")
+                print("We dont have that")
         except ValueError:
             print("Invalid Choice")
 
