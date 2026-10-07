@@ -13,23 +13,22 @@ def main():
     welcome()
 
     def get_item(a):
-        try:
-            if a == "cheeseburger":
-                print("🍔")
-            elif a == "fries":
-                print("🍟")
-            elif a == "soda":
-                print("🥤")
-            elif a == "ice cream":
-                print("🍦")
-            elif a == "cookie":
-                print("🍪")
-            else:
-                print("We dont have that")
-        except ValueError:
-            print("Invalid Choice")
-
-    choice = input("What would you like to order? ").lower().strip()
+        if a == "cheeseburger":
+            print("🍔")
+        elif a == "fries":
+            print("🍟")
+        elif a == "soda":
+            print("🥤")
+        elif a == "ice cream":
+            print("🍦")
+        elif a == "cookie":
+            print("🍪")
+        else:
+            print("We dont have that")
+    try:
+        choice = input("What would you like to order? ").lower().strip()
+    except ValueError:
+        print("Invalid")
     print("Perfect!")
     get_item(choice)
 
