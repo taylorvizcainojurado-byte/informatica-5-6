@@ -1,0 +1,17 @@
+def binary_to_decimal(binary_str):
+    print(f"Decimal number: {int(binary_str, 2)}")
+
+
+def main():
+    print("Binary to Decimal Converter")
+    print("This program converts a binary number into a decimal number.")
+
+    while True:
+        user_input = input("Enter a binary number: ")
+        if user_input and all(c in "01" for c in user_input):
+            binary_to_decimal(user_input)
+            break
+        print("Invalid input. Please enter only 0s and 1s.")
+
+
+main()
