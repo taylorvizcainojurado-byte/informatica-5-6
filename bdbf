@@ -1,0 +1,25 @@
+def binary_to_decimal(binary_str):
+    """Converts a binary string to a decimal integer and prints it[span_0](start_span)[span_0](end_span)."""
+    decimal_val = int(binary_str, 2)
+    print(f"Decimal number: {decimal_val}")
+
+
+def main():
+    """Welcomes the user, validates binary input, and calls binary_to_decimal[span_1](start_span)[span_1](end_span)."""
+    print("Binary to Decimal Converter")
+    print("This program converts a binary number (base-2) into its decimal (base-10) equivalent.")
+    print()
+
+    while True:
+        user_input = input("Enter a binary number: ").strip()
+
+        # Input validation: check if all characters are '0' or '1'
+        if user_input and all(char in "01" for char in user_input):
+            binary_to_decimal(user_input)
+            break
+        else:
+            print("Invalid input! Please enter a valid binary number containing only 0s and 1s.\n")
+
+
+if __name__ == "__main__":
+    main()
