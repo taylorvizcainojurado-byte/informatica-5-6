@@ -29,7 +29,7 @@ def min_temperature(temperatures):
     for hour in temperatures:
         if hour < lowest_temp:
             lowest_temp = hour
-    print(f"High {lowest_temp}°")
+    print(f"Low {lowest_temp}°")
 
 if __name__ == "__main__":
     main()
