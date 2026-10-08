@@ -30,14 +30,8 @@ def main():
     except ValueError:
         print("Invalid")
     print("Perfect!")
+
     get_item(choice)
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()
