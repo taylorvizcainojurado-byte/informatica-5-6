@@ -10,12 +10,17 @@
 #   once the word is guessed print(you win)
 #
 #   hangman()
-#
-#
-#
-#
-#
-#
-#
-#
-#
+import random
+def main():
+
+
+
+    def start_game():
+        with open("random_words.txt") as words:
+            content = words.read().splitlines()
+            word = random.choice(content)
+            print(word)
+
+    start_game()
+if __name__ == "__main__":
+    main()

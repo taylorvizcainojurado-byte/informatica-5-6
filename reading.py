@@ -11,15 +11,15 @@ def main():
             print(f"Day {count}: {line}")
 
     #assignment
-    def largest(file):
+    def largest():
         number_list = []
-        with open(file) as number_list:
+        with open("random_numbers.txt") as number_list:
             for number in number_list:
                 number = number.replace("\n","")
                 number_list.append(int(number))
         print(max(number_list))
 
-    largest("random_numbers.txt")
+    largest()
 
 
 if __name__ == "__main__":
