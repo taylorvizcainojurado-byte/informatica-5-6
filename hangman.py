@@ -19,10 +19,13 @@ def main():
         with open("random_words.txt") as words:
             content = words.read().splitlines()
             word = random.choice(content)
-            print(word)
+            line = ["_"]* len(word)
+            print(" ".join(line))
+            
+
 
     start_game()
 
-    
+
 if __name__ == "__main__":
     main()
