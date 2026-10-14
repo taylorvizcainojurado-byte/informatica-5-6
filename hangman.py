@@ -19,10 +19,16 @@ def main():
         with open("random_words.txt") as words:
             content = words.read().splitlines()
             word = random.choice(content)
+            print("This is your word: ")
             line = ["_"]* len(word)
             print(" ".join(line))
-            
+        while True:
+            guess = input("Take a guess: ")
 
+            if len(guess) == 1:
+                break
+            else:
+                print("Invalid Guess. Try Again ")
 
     start_game()
 
