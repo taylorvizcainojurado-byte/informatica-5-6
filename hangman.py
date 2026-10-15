@@ -1,37 +1,46 @@
-#define main()
-#   print(welcome)
-#   pull possible words from a list using a random assign to a variable
-#define hangman()
-#   print how many letters we are using using len
-#   assign a variable as lifecount = 5
-#   input so the user can start using letters in a for loop
-#   the person can only get 5 letters wrong
-#   for each one wrong it has to print(lifecount - 1)
-#   once the word is guessed print(you win)
-#
-#   hangman()
 import random
+
 def main():
 
 
-
     def start_game():
+        attempts = 10
         with open("random_words.txt") as words:
-            content = words.read().splitlines()
-            word = random.choice(content)
-            print("This is your word: ")
-            line = ["_"]* len(word)
-            print(" ".join(line))
-        while True:
-            guess = input("Take a guess: ")
+            word_bank = words.read().splitlines()
+        word = random.choice(word_bank)
+        hint = ["_"] * len(word)
+        incorrect_letters = []
+        while attempts > 0:
+            print("Current word:", " ".join(hint))
 
-            if len(guess) == 1:
-                break
+            while True:
+                guess = input("Guess a letter: ").lower()
+                if len(guess) == 1:
+                    break
+                else:
+                    print("Invalid guess. Try again.")
+
+            if guess in word and guess not in hint:
+                for i in range(len(word)):
+                    if word[i] == guess:
+                        hint[i] = guess
+                print("Great guess!")
+            elif guess in hint:
+                print("You already guessed that letter! Attempts left:", str(attempts))
             else:
-                print("Invalid Guess. Try Again ")
+                if guess not in incorrect_letters:
+                    incorrect_letters.append(guess)
+                    attempts -= 1
+                    print("Wrong guess! Attempts left:", str(attempts))
+                print(f"Incorrect letters: {" ".join(incorrect_letters)}")
+
+                if "_" not in hint:
+                    print("Congratulations! 🥳 You guessed the word:", word)
+
+                if attempts == 0 and "_" in hint:
+                    print("No attempts left 💀 The word was:", word)
 
     start_game()
-
 
 if __name__ == "__main__":
     main()
